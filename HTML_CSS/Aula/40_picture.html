@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>pagina de exemplo estrutura basica</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Davi">
+        <meta name="description" content="ajuda a estruturar um código html">
+        <meta name="keywords" content="html5, tecnologia, estruturar, melhorar">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Picture</h1>
+
+        <picture>
+            <source media="(min-width: 480px)" sizes="33.33vw" srcset="../rwd-images/1280.jpg
+             1280w, ../rwd-images/960.jpg 960w, ../rwd-images/480.jpg 480w">
+
+            <source sizes="100vw" srcset="../rwd-images/822_mob.jpg 822w, 
+            ../rwd-images/640_mob.jpg 640w, ../rwd-images/320_mob.jpg 320w">
+
+            <img src="../rwd-images/1280.jpg" alt="texto alternativo">
+        </picture>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>pagina de exemplo estrutura basica</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Davi">
+        <meta name="description" content="ajuda a estruturar um código html">
+        <meta name="keywords" content="html5, tecnologia, estruturar, melhorar">
+
+        <style>
+            .formLogin{
+                width: 250px;
+                margin:50px auto 0;
+                font-family: sans-serif;
+            }
+
+            .formLogin fieldset{
+                background-color: #CCC;
+                border: 3px solid rgb(14, 7, 114);
+            }
+
+            .formLogin legend{
+                display: inline-block;
+                padding: 10px;
+                background-color: thistle;
+            }
+
+            .formLogin label{
+                display: block;
+                margin-top: 15px;
+            }
+
+            #user, #pass{
+                background-color: rgb(151, 147, 147);
+            }
+
+            #user, #pass, .btn{
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 15px;
+                font-size: 18px;
+                border: none;
+            }
+
+            #user:focus, #pass:focus{
+                background-color: white;
+            }
+
+            .btn{
+                margin-top: 15px;
+            }
+
+            #user{
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Exemplo de formulario</h1>
+        <form action="#" method="POST" class="formLogin">
+            <fieldset>
+
+                <legend>Login</legend>
+
+                <label for="user">Digite o seu usuario</label>
+                <input type="text" id="user" name="user" autofocus>
+
+                <label for="pass">Digite a senha</label>
+                <input type="password" id="pass" name="pass">
+
+                <input type="submit" value="logar" class="btn"> 
+
+            </fieldset>
+        </form>
+    </body>
+</html>

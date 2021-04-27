@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>pagina de exemplo estrutura basica</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Davi">
+        <meta name="description" content="ajuda a estruturar um código html">
+        <meta name="keywords" content="html5, tecnologia, estruturar, melhorar">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+            body{
+                background-color: rgb(240, 255, 247);
+                font-size: 16px;
+            }
+
+            .teste{
+                background-color: red;
+                width: 320px;
+                height: 50px;
+            }
+
+            .container{
+                background-color: white;
+                padding: 15px;
+                font-size: 24px;
+            }
+
+            .container div{
+               background-color: #ccc;
+               margin-bottom: 15px;
+               height: 150px; 
+               font-size: 22px;
+            }
+
+            .clearfix:after{
+                content: " ";
+                display: block;
+                clear: both;
+            }
+
+            @media screen and (min-width: 400px) {
+                body{
+                    background-color: yellow;
+                }
+
+                .container div{ 
+                    margin: 10px;
+                    width: calc(50% - 20px);
+                    float: left;
+                    
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+
+        <!--.container div{
+            width: 48%;
+            float: left;
+            margin: 1%;
+        } -->
+        
+        <h1>Exemplo de media queries</h1>
+
+        <p>Paragrafo qualquer</p>
+
+        <!-- <div class="teste"></div> -->
+
+        <div class="container clearfix">
+            <div> div 1 </div>
+            <div> div 2 </div>
+        </div>
+    </body>
+</html>

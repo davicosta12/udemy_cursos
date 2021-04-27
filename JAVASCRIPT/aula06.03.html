@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <div id="output"></div>
+        
+    </body>
+    <script>
+        var produtos = [
+            {"nome": "caneta", "preco": 2}, 
+            {"nome": "lapis", "preco": 1.2},
+            {"nome": "borracha", "preco": 0.5},
+        ];
+
+        var msg = '';
+        for( var i=0; i<produtos.length; i++ ) {
+            msg = msg + '<h2>Produto: ' + produtos[i].nome + '</h2>';
+            msg = msg + '<p>Preço: ' + produtos[i].preco + '</p>';
+        }
+
+        document.querySelector('#output').innerHTML = msg;
+    </script>
+</html>

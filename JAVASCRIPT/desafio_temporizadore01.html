@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <div></div>
+
+        <script>
+            
+            (function(){
+                var d = document.querySelector('div');
+                 
+                function horaAtual() { 
+                    var horario = new Date();
+                    var hora = horario.getHours() < 10 ? '0' + horario.getHours() : horario.getHours();
+                    var min = horario.getMinutes() < 10 ? '0' + horario.getMinutes() : horario.getMinutes();
+                    var seg = horario.getSeconds() < 10 ? '0' + horario.getSeconds() : horario.getSeconds();
+                    d.textContent = hora + ':' + min + ':' + seg;
+                }
+
+                setInterval(horaAtual, 1000);
+                          
+            })()
+
+        </script>
+    </body>
+</html>

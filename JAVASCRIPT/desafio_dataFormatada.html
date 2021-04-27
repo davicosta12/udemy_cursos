@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            
+            (function(){
+                var data = new Date();
+                data.setDate(3);
+                data.setMonth(5);
+                function dataFormatada(data) { 
+                    var dia = data.getDate() < 10 ? '0' + data.getDate() : data.getDate();
+                    var mes = data.getMonth() + 1;
+                    mes = mes < 10 ? '0' + mes : mes;
+                    return dia + '/' +  (mes) + '/' + data.getFullYear();
+                }
+                console.log(dataFormatada(data));
+                
+            })()
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+
+            (function(){
+                function retorna_media() {
+                let quantidade = arguments.length;
+                let i = 0;
+                let soma = 0;
+                while( i<quantidade ) {
+                    soma += arguments[i];
+                    i++;
+                }
+                return soma/quantidade;
+            }
+            let media01 = retorna_media(2, 4);
+            let media02 = retorna_media(2, 3, 10, 6);
+            console.log(media01);
+            console.log(media02);
+
+            })()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>pagina de exemplo estrutura basica</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Davi">
+        <meta name="description" content="ajuda a estruturar um código html">
+        <meta name="keywords" content="html5, tecnologia, estruturar, melhorar">
+
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+
+            #calculator{
+                width: 200px;
+                margin: 15px auto;
+                padding: 20px;
+                background-image: linear-gradient(#b7b7b7, #9c9c9c);
+                box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+                border-radius: 5px;
+            }
+
+            /* GRID */
+
+            #calculator{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto repeat(5, 40px);
+                grid-gap: 5px;     
+            }
+
+            button{
+                border-style: none;
+                font-size: .98em;
+                padding: .25em;
+            }
+
+            #display{
+                padding: 10px;
+                margin-bottom: 15px;
+                font-size: 1.4em;
+                text-align: right;
+                background-image: linear-gradient(#c5c5c5, #e0e0e0);
+                box-shadow: inset 3px 2px 0 white;
+                grid-column-start: 1;
+                grid-column-end: -1;
+
+            }
+
+            #simbolo-mais{
+                background-color: rgb(168, 166, 166);
+                background-image: linear-gradient(#959595, #bdbdbd);
+                box-shadow: inset 2px 1px 0 white;
+                grid-column-start: 4;
+                grid-column-end: -1;
+                grid-row-start: 5;
+                grid-row-end: 7;
+            }
+
+            #button-virgula{
+                grid-column-start: 4;
+                grid-column-end: 3;
+            }
+
+            #button-zero{
+                background-color: rgb(168, 166, 166);
+                background-image: linear-gradient(#959595, #bdbdbd);
+                box-shadow: inset 2px 1px 0 white;
+                grid-column-start: 1;
+                grid-column-end: 3; 
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="calculator">
+            <div id="display">0</div>
+
+                <button class= "row-1">AC</button> <button class= "row-1">%</button> <button class= "row-1">X</button> <button class= "row-1">/</button>
+                <button class= "row-2">7</button> <button class= "row-2">8</button> <button class= "row-2">9</button> <button class= "row-2">=</button>
+                <button class= "row-3">4</button> <button class= "row-3">5</button> <button class= "row-3">6</button> <button class= "row-3">-</button>
+                <button class= "row-3">1</button> <button class= "row-3">2</button> <button class= "row-3">3</button> <button id="simbolo-mais" class= "row-3">+</button>
+                <button id="button-zero" class= "row-4">0</button> <button id="button-virgula" class= "row-4">,</button>
+            
+        </div>
+    </body>
+</html>

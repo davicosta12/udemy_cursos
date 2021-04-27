@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <div></div>
+
+        <script>
+            var n = 0;
+
+            function somaUm() {
+                console.log('n', ++n);
+
+                if( n>5 ) clearInterval(intervalo);
+            }
+
+            setTimeout(somaUm,1000);
+
+            setInterval(somaUm, 5000);
+
+            var timeout = setTimeout(somaUm, 1000);
+
+            var intervalo = setInterval(somaUm, 1000);
+
+            var str = ''; 
+            var d = document.querySelector('div');
+            var timeoutTeste = setTimeout(function(){
+
+                for(var i = 0; o < 1000; i++) {
+                    str += "i: " + i + " -- ";
+                    d.textContent += str;
+                }
+                
+            }, 3000);
+
+        </script>
+    </body>
+</html>

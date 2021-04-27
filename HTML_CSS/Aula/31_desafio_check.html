@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>pagina de exemplo estrutura basica</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Davi">
+        <meta name="description" content="ajuda a estruturar um código html">
+        <meta name="keywords" content="html5, tecnologia, estruturar, melhorar">
+
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+            span{
+                display: inline-block;
+                background-color: #ccc;
+                width: 60px;
+                height: 30px;
+                border-radius: 15px;
+            }
+
+            span:before{
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 5px;
+                background-color: rgb(237, 236, 236);
+                transition: transform .3s ease-in-out;
+            }
+
+            input[type="checkbox"]{
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+                margin: 0;
+                overflow: hidden;
+                
+            }
+
+            input[type="checkbox"]:focus + span{
+                box-shadow: 0 0 0 2px red;
+            }
+   
+            input[type="checkbox"]:checked + span:before{
+                background-color: red;
+                transform: translate(30px);
+            }    
+
+        </style>
+    </head>
+
+    <body>
+        <label>
+            <input type="checkbox" name="check1" id="check1">
+            <span></span>
+            Esporte
+        </label>
+
+        <label>
+            <input type="checkbox" name="check2" id="check2">
+            <span></span>
+            Política
+        </label>
+
+        <label>
+            <input type="checkbox" name="check3" id="check3">
+            <span></span>
+            Educação
+        </label>
+    </body>
+</html>

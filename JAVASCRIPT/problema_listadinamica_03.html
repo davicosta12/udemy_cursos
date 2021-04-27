@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+
+        <style>
+            .done{
+                text-decoration: line-through;
+                color: #555;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lógica de programação com Javascript</h1>
+
+            <input type="text" id="txtTask">
+            <button id="btn">Cadastrar tarefa</button>
+
+            <ul>
+                <li>estudar Javascript - DOM</li>
+                <li>estudar eventos em Javascript</li>
+                <li>jogar video-game</li>
+            </ul>
+
+        </div>
+
+        <script>
+            (function(){
+                'use strict'
+
+                var $ul = document.querySelector('ul');
+                var $lis = $ul.querySelectorAll('li');
+                var $txtTask = document.querySelector('#txtTask');
+                var $btn = document.querySelector('#btn');
+
+                $btn.addEventListener('click', AddTask);
+                $txtTask.addEventListener('keyup', function(event){
+                    if(event.keyCode === 13) {
+                        AddTask();
+                    }
+                })
+
+                for(var i = 0; i < $lis.length; i++){
+                    addEvent($lis[i]);
+                }
+                
+                function toogleDone() {
+                    this.classList.toggle('done');
+                }
+
+                function AddTask(){
+                    var li = document.createElement('li');
+                    var text = document.createTextNode($txtTask.value);
+
+                    li.appendChild(text);
+                    $ul.appendChild(li);
+
+                    $txtTask.value = '';
+                    $txtTask.focus();
+
+                    addEvent(li);
+                }
+
+                function addEvent(li) {
+                    li.addEventListener('click', toogleDone);
+                }
+                 
+            })()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            //Primeiro valor
+            var x = parseInt(prompt("Valor jogador 1: "));
+
+            //Segundo valor
+            var y = parseInt(prompt("Valor jogador 2: "));
+
+            if( x == y) alert("Empate!");
+            else {
+                var n_sorteado = parseInt(Math.random() * 2);
+                if( n_sorteado == 0 && x < y || n_sorteado == 1 && x > y ) alert("O jogador 1 ganhou!");    
+                else alert("O jogador 2 ganhou!");           
+            }
+        </script>
+    </body>
+</html>

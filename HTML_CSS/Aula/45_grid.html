@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            .gridContainer{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+            }
+
+            .gridItem{
+                background-color: orange;
+                padding: 15px;
+                font-family: sans-serif;
+            }
+            
+            /* GRID */
+            .gridContainer{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 100px 50px 1fr 50px;
+                grid-gap: 20px;
+            }
+
+            .header{
+                grid-column-start: 1;
+                grid-column-end: -1;
+            }
+
+            .nav{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            .aside{
+                grid-row-start: 2;
+                grid-row-end: -1;
+                grid-column-start: 3;
+                grid-column-end: -1;
+                z-index: 1;
+            }
+
+            .main{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                min-height: 200px;
+            }
+
+            .footer{
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 4;
+                grid-row-end: -1;
+                background-color: rgba(255, 0, 0, .5);
+                z-index: 2;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2>Grid Layout</h2>
+
+        <div class="gridContainer">
+            <header class="header gridItem">header</header>
+            <nav class="nav gridItem">nav</nav>
+            <aside class="aside gridItem">aside</aside>
+            <main class="main gridItem">
+                main
+            </main>
+            <footer class="footer gridItem">footer</footer>
+        </div>
+        
+        
+    </body>
+</html>

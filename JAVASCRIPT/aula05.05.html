@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <button onclick="mostrarAreOutput()">Mostra area Output</button>
+        
+        <div id="output"></div>
+
+        <script>
+            mostrarAreOutput();
+
+            function CalculaArea(l, h){
+                if ( l === undefined || h === undefined )  throw new Error('chama passando somente numeros');
+                if ( isNaN(l) || isNaN(h) )  throw new Error('apenas números');
+                return l * h;
+            }
+
+            function mostrarAreOutput() {
+                var largura = parseInt(prompt('Digite a largura do retângulo: '));
+                var altura = parseInt(prompt('Digite a altura do retângulo: '));
+
+                try {
+                    var area = CalculaArea(largura, altura);
+                } catch(e) {
+                    area = e;
+                }
+                document.querySelector('#output').innerHTML = 'A area do retângulo é: ' +
+                area;  
+            }
+
+            
+        </script>
+    </body>
+</html>

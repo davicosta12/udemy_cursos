@@ -1,0 +1,142 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#principal{
+    width: 1024px;
+    margin: 20px auto;
+}
+
+.header-nav{
+    position: absolute;
+    right: 0;
+    top: 0;    
+    height: 100%;
+}
+
+.logo-tipo{
+    padding: 5px 135px;
+    margin: auto;
+    background-color:  rgba(24, 26, 44, 0.973);
+    position: relative;
+}
+
+.header-lista{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header-lista li{
+    list-style-type: none;
+    color: rgb(64, 107, 124);
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 50px 0 0;
+    padding-top: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-lista a{
+    text-decoration: none;
+    color: rgb(64, 107, 124);
+    transition: color 1s;
+}
+
+.header-lista a:hover{
+    color: rgb(13, 157, 214);
+    transform:  scale(151);
+}
+
+.Article-About{
+    background-color: #003d52;
+    background-image: url(../imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 100px;
+    color: white;
+    margin-top: 20px;
+}
+
+.Article-About h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.Article-About p{
+    font-size: 15px;
+    font-weight: normal;
+    width: 65%;  
+}
+
+.Portfolio{
+    padding: 2em 100px;
+    text-align: center; 
+}
+
+.Portfolio h1{
+    font-size: 36px;
+    color:#252525;
+}
+
+.Portfolio p{
+    color: rgb(112, 112, 112);
+    font-size: 16px;
+    text-decoration: transparent;
+    line-height: 2;
+}
+
+.section-card{
+    overflow: auto;
+    padding: 0 100px 50px 100px;
+}
+
+.card{
+    float: left;
+    text-align: center;
+    width: 32%;
+}
+
+.Titulo-modelo{
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.paragrafo-modelo{
+    font-size: 14px;
+    text-align: center;
+    color: #494848;
+}
+
+.contact-us{
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-style: normal;
+    text-align: center;
+    color:rgb(1, 89, 139);
+    padding: 2em 0;
+}
+
+
+.rodape{
+    margin: 2em 0;
+}
+
+.rodape p{
+    text-align: center;
+    padding:30px 0;
+    background-color: black;
+    color: rgb(78, 134, 156);
+}
+    
+
+
+
+
+

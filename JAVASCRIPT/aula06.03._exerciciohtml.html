@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <div id="output"></div>
+        
+    </body>
+    <script>
+        var produtos = [
+            {"nome": "Davi", "email": "deadspace24@hotmail.com"}, 
+            {"nome": "Lais", "email": "boquinhasaliente@nervosinha.net"},
+            {"nome": "Fernanda", "email": "Tamecshow@deodoronunes.ivolanda"},
+        ];
+
+        var msg = '';
+        for( var i=0; i<produtos.length; i++ ) {
+            msg = msg + produtos[i].nome + ' - ' + produtos[i].email + '<br>';
+        }
+
+        document.querySelector('#output').innerHTML = msg;
+    </script>
+</html>

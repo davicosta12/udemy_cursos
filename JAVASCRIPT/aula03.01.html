@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            var numero = parseInt(prompt("Digite um número para obter a tabuada dele: "));
+            var count = 0;
+
+            while( count <= 1000 ) {
+                document.write(count + " x " + numero + " = " + count*numero + "<br>");
+                if( count%10 == 0 && count > 0 ) document.write("<hr>");
+                count++;
+            }
+            document.write("Fim do loop!!!");
+            
+        </script>
+    </body>
+</html>

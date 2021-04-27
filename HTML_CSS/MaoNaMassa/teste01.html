@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>pagina de exemplo estrutura basica</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Davi">
+        <meta name="description" content="ajuda a estruturar um código html">
+        <meta name="keywords" content="html5, tecnologia, estruturar, melhorar">
+
+        <style>
+            @keyframes anda{
+                0%{
+                    transform: translateX(0);
+                }
+
+                50%{
+                    background-color: cornflowerblue;
+                }
+
+               75%{
+                    height: 100px;
+               }
+
+                100%{
+                    transform: translateX(500px);
+                }
+            }
+
+            .blocopai{
+                background-color: bisque;
+                width: 650px;
+                height: 220px;
+            }
+
+            .bloco01{
+                animation-name: anda;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;  
+
+                width: 120px;
+                height: 80px;
+                border-color: red;
+                border-width: 2px;
+                border-style: solid;  
+                transition: transform .5s;
+            }
+
+            .bloco01:hover{
+                transform: scale(.5) translateX(50%);
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <h1>TRANSFORM / ANIMATION</h1>
+        <div class="blocopai">
+            <div class="bloco01">1</div>
+            <div class="bloco02">2</div>
+            <div class="bloco03">3</div>
+        </div>
+    </body>
+</html>

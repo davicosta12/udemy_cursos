@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação com Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+
+            (function(){
+                function retorna_IndiceIMC(altura, peso) {
+                    let imc = peso / Math.pow(altura, 2);
+                    return imc;
+                }
+
+                function informa_class(altura, peso) {
+                    let imc = retorna_IndiceIMC(altura, peso);
+                    if( imc>=16 && imc<=16.9 ) return  'Sua classificação: Muito abaixo do peso.';
+                    else if( imc<=18.4 ) return 'Sua classificação: Abaixo do peso.';
+                    else if( imc<=24.9 ) return 'Sua classificação: Peso normal.';
+                    else if( imc<=29.9 ) return 'Sua classificação: Acima do Peso.';
+                    else if( imc<=34.9 ) return 'Sua classificação: Obesidade Grau 1';
+                    else if( imc<=40 ) return 'Sua classificação: Obesidade Grau 2.';
+                    else return 'Sua classificação: Obesidade Grau 3.'
+                }
+
+                console.log(informa_class(1.66, 69));
+                console.log(informa_class(1.70, 69));
+                console.log(informa_class(1.75, 65));
+
+            })()
+        </script>
+    </body>
+</html>
